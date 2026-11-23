@@ -1,0 +1,5 @@
+name,email,phone,ssn,credit_card,dob,zip,notes
+John Doe,john.doe@example.com,555-867-5309,123-45-6789,4111111111111111,01/15/1990,90210,Regular customer
+Jane Smith,jane.smith@email.org,+1 (800) 555-0199,987-65-4321,5500005555555559,07/04/1985,10001,VIP member
+Bob Johnson,bob.j@company.net,212-555-0100,456-78-9012,378282246310005,12/31/1978,30301,Passport: AB1234567
+Alice Brown,alice.brown@webmail.com,415-555-0182,321-54-9876,6011111111111117,03/22/1995,60601,IP: 192.168.1.100

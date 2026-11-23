@@ -1,0 +1,7 @@
+pandas
+openpyxl
+python-docx
+pdfplumber
+streamlit
+mysql-connector-python
+plotly
