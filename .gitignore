@@ -6,4 +6,6 @@ __pycache__/
 reports/*.json
 reports/*.csv
 reports/*.html
+reports/*.xlsx
 *.db
+.streamlit/secrets.toml

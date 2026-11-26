@@ -2,19 +2,29 @@ import mysql.connector
 import json
 from datetime import datetime
 
-DB_CONFIG = {
-    "host": "localhost",
-    "user": "root",
-    "password": "Nxnuuuu@77",
-    "database": "pii_scanner",
-}
+try:
+    import streamlit as st
+    _s = st.secrets["mysql"]
+    DB_CONFIG = {
+        "host": _s["host"],
+        "port": int(_s["port"]),
+        "user": _s["user"],
+        "password": _s["password"],
+        "database": _s["database"],
+        "ssl_disabled": False,
+    }
+except Exception:
+    DB_CONFIG = {
+        "host": "localhost",
+        "user": "root",
+        "password": "Nxnuuuu@77",
+        "database": "pii_scanner",
+    }
 
 
 def _connect():
     conn = mysql.connector.connect(**DB_CONFIG)
     cursor = conn.cursor()
-    cursor.execute("CREATE DATABASE IF NOT EXISTS pii_scanner")
-    cursor.execute("USE pii_scanner")
     cursor.execute("""
         CREATE TABLE IF NOT EXISTS scans (
             id INT AUTO_INCREMENT PRIMARY KEY,
